@@ -5,7 +5,7 @@ def names(df):
     return [row['name'] for _, row in df.iterrows() if pd.notna(row['age']) and row['age'] < 33]
 
 def birth_year_column(df):
-    df['birth_year'] = df['age'].apply(lambda x: 2024 - x if pd.notnull(x) else None)
+    df['birth_year'] = df['age'].apply(lambda x: 1912 - x if pd.notnull(x) else None)
     return df
 
 df = pd.read_csv("./assets/titanic.csv")
